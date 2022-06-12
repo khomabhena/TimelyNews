@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.colwanymab.timelynews">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Read"
+            android:label="@string/title_activity_read"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".PaymentOptions"
+            android:label="@string/title_activity_payment_options"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MenuApp" />
+        </activity>
+        <activity
+            android:name=".SendStory"
+            android:label="@string/title_activity_send_story"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MenuApp" />
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_join_network"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SignUp"
+            android:label="@string/title_activity_sign_up"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".MenuApp"
+            android:label="@string/title_activity_menu"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MainActivity" />
+        </activity>
+        <activity
+            android:name=".JoinNetwork"
+            android:label="@string/title_activity_join_network"
+            android:parentActivityName=".MenuApp"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MenuApp" />
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".MenuApp"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MenuApp" />
+        </activity>
+        <activity
+            android:name=".ReceivedStories"
+            android:label="@string/title_activity_received_stories"
+            android:parentActivityName=".MenuApp"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MenuApp" />
+        </activity>
+        <activity
+            android:name=".Publish"
+            android:label="@string/title_activity_publish"
+            android:parentActivityName=".MenuApp"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MenuApp" />
+        </activity>
+        <activity
+            android:name=".Receive"
+            android:label="@string/title_activity_receive"
+            android:parentActivityName=".MenuApp"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MenuApp" />
+        </activity>
+        <activity
+            android:name=".ShareNews"
+            android:label="@string/title_activity_share_news"
+            android:parentActivityName=".MenuApp"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MenuApp" />
+        </activity>
+        <activity
+            android:name=".TopUp"
+            android:label="@string/title_activity_top_up"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ConfirmationMessage"
+            android:label="@string/title_activity_confirmation_message"
+            android:parentActivityName=".TopUp"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.colwanymab.timelynews.TopUp" />
+        </activity>
+    </application>
+
+</manifest>

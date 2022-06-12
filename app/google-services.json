@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1065140646505",
+    "firebase_url": "https://timely-news-98ad1.firebaseio.com",
+    "project_id": "timely-news-98ad1",
+    "storage_bucket": "timely-news-98ad1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1065140646505:android:e64a99e47b7e0757",
+        "android_client_info": {
+          "package_name": "com.colwanymab.timelynews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1065140646505-77fij869odvaq8dgt4mqj6a0r2os6cvd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8GA5XMD_zDBs5qiBbV4CG9BXIiK_uQDk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

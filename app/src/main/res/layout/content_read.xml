@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackground"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Read"
+    tools:showIn="@layout/activity_read">
+
+    <ScrollView
+        android:id="@+id/scrollRead"
+        android:paddingTop="?android:attr/actionBarSize"
+        app:layout_constraintTop_toBottomOf="@+id/viewToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/mainBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHeadline"
+                android:text="Headline"
+                android:textSize="18sp"
+                android:fontFamily="serif"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/ivDate"
+                app:srcCompat="@drawable/ic_time"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeadline"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:text="19 JUN 2018"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@+id/ivDate"
+                app:layout_constraintLeft_toRightOf="@+id/ivDate"
+                app:layout_constraintBottom_toBottomOf="@+id/ivDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:visibility="gone"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeadline"
+                app:layout_constraintRight_toLeftOf="@id/ivSaved"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:id="@+id/ivSaved"
+                app:srcCompat="@drawable/ic_saved"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvHeadline"
+                app:layout_constraintRight_toLeftOf="@id/ivShare"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:id="@+id/ivShare"
+                android:onClick="shareArticle"
+                app:srcCompat="@drawable/ic_share_blue"
+                android:layout_marginEnd="25dp"
+                android:padding="15dp"
+                app:layout_constraintTop_toTopOf="@id/ivSaved"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/ivSaved"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <View
+                android:id="@+id/view1"
+                android:background="@color/line_divider"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/ivDate"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="1px" />
+
+            <TextView
+                android:id="@+id/tvStory"
+                android:text="@string/large_text2"
+                android:hint="Story"
+                android:textSize="17sp"
+                android:textColor="#515151"
+                android:lineSpacingExtra="7dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="100dp"
+                android:paddingBottom="100dp"
+                app:layout_constraintTop_toBottomOf="@+id/view1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/viewToolbar"
+        android:background="@color/mainBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="?android:attr/actionBarSize" />
+
+    <ImageView
+        android:id="@+id/ivArrow"
+        android:onClick="finish"
+        app:srcCompat="@drawable/toolbar_arrow"
+        android:paddingStart="17dp"
+        android:paddingEnd="33dp"
+        app:layout_constraintTop_toTopOf="@+id/viewToolbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/viewToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
